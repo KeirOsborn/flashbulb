@@ -1,0 +1,13 @@
+<h1>Page#new</h1>
+
+<h1>Create a page</h1>
+<%= form_for @page do |form| %>
+	<p>www.flashbulb/</p><%= form.text_field :name, :placeholder => "enter your page address" %><p>.com</p>
+	<p>Start Time</p>
+	<%= form.time_select :start_time %>
+	<p>End Time</p>
+	<%= form.time_select :end_time %>
+	<%= form.submit "create" %>
+	<% end %>
+
+
