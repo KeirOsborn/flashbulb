@@ -1,8 +1,13 @@
 Flashbulb::Application.routes.draw do
 
-  resources :pages
-
+  
+  resources :pages, :path => '', :only => [:new, :show, :create]
   root :to => "pages#new"
+
+  match '/:name' => 'pages#show'
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
