@@ -1,7 +1,7 @@
 Flashbulb::Application.routes.draw do
 
   
-  resources :pages, :path => '', :only => [:new, :show, :create, :destroy]
+  resources :pages, :path => '', :only => [:new, :show, :create]
   root :to => "pages#new"
 
   match '/:name' => 'pages#show'
