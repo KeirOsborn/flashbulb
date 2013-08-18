@@ -2,3 +2,16 @@
 <h2><%= @page.name %> Was Created</h2>
 <h2><%= @page.start_time %></h2>
 <h2><%= @page.end_time %></h2>
+
+
+
+
+<%= form_for(@page, :url => page_path(@page), :html => { :method  => "put" }) do |f| %>
+<%= f.text_field :text %>
+<%= f.submit %>
+<% end %>
+
+<p>test dropping in form text <%= @page.text %></p>
+
+
+
